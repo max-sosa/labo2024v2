@@ -19,7 +19,7 @@ dataset <- fread("~/datasets/gridsearch.csv")
 # genero el modelo,  aqui se construye el arbol
 # quiero predecir clase_ternaria a partir de el resto de las variables
 modelo <- rpart(
-    formula = "ganancia_mean ~ .",
+    formula = "ganancia_mean ~ .", #aca decia "clase_ternaria"
     data = dataset, # los datos donde voy a entrenar
     xval = 0,
     cp = -0.3, # esto significa no limitar la complejidad de los splits
